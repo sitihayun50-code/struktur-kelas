@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Struktur Kelas | XI RPL 1</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<div class="app">
+
+    <!-- SIDEBAR -->
+    <aside class="sidebar" id="sidebar">
+
+        <div class="brand">
+            <div class="brand-logo">K</div>
+
+            <div>
+                <h2>XI RPL 1</h2>
+                <span>Class Dashboard</span>
+            </div>
+        </div>
+
+        <nav>
+            <a href="#dashboard" class="nav-item active">
+                <span>⌂</span>
+                Dashboard
+            </a>
+
+            <a href="#pengurus" class="nav-item">
+                <span>♙</span>
+                Pengurus
+            </a>
+
+            <a href="#siswa" class="nav-item">
+                <span>☷</span>
+                Daftar Siswa
+            </a>
+
+            <a href="#informasi" class="nav-item">
+                <span>ⓘ</span>
+                Informasi
+            </a>
+        </nav>
+
+        <div class="sidebar-bottom">
+            <button onclick="toggleTheme()" id="themeButton">
+                🌙 Dark Mode
+            </button>
+        </div>
+
+    </aside>
+
+
+    <!-- MAIN -->
+    <main class="main">
+
+        <!-- TOPBAR -->
+        <header class="topbar">
+
+            <button class="menu-btn" onclick="toggleSidebar()">
+                ☰
+            </button>
+
+            <div>
+                <p class="small-title">SELAMAT DATANG</p>
+                <h1>Class Dashboard</h1>
+            </div>
+
+            <div class="top-actions">
+                <div class="date-box" id="dateBox"></div>
+            </div>
+
+        </header>
+
+
+        <!-- DASHBOARD -->
+        <section id="dashboard">
+
+            <div class="hero">
+
+                <div>
+                    <span class="badge">TA 2026 / 2027</span>
+
+                    <h2>
+                        Struktur Kelas
+                        <br>
+                        <strong>XI RPL 1</strong>
+                    </h2>
+
+                    <p>
+                        Selamat datang di dashboard kelas XI RPL 1.
+                        Semua informasi kelas tersedia di sini.
+                    </p>
+                </div>
+
+                <div class="hero-symbol">
+                    XI
+                </div>
+
+            </div>
+
+
+            <!-- STATISTICS -->
+            <div class="stats">
+
+                <div class="stat-card">
+                    <div class="stat-icon">👥</div>
+                    <div>
+                        <span>Total Siswa</span>
+                        <strong id="totalSiswa">0</strong>
+                    </div>
+                </div>
+
+                <div class="stat-card">
+                    <div class="stat-icon">♙</div>
+                    <div>
+                        <span>Pengurus</span>
+                        <strong>4</strong>
+                    </div>
+                </div>
+
+                <div class="stat-card">
+                    <div class="stat-icon">🏫</div>
+                    <div>
+                        <span>Kelas</span>
+                        <strong>XI RPL 1</strong>
+                    </div>
+                </div>
+
+                <div class="stat-card">
+                    <div class="stat-icon">📅</div>
+                    <div>
+                        <span>Tahun Ajaran</span>
+                        <strong>2026/27</strong>
+                    </div>
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- PENGURUS -->
+        <section id="pengurus" class="section">
+
+            <div class="section-heading">
+                <div>
+                    <span class="section-label">STRUKTUR</span>
+                    <h2>Pengurus Kelas</h2>
+                </div>
+            </div>
+
+
+            <div class="organization">
+
+                <div class="person-card wali">
+
+                    <div class="avatar">WK</div>
+
+                    <div>
+                        <span>WALI KELAS</span>
+                        <h3>Bapak / Ibu Guru</h3>
+                        <p>Pembimbing Kelas</p>
+                    </div>
+
+                </div>
+
+
+                <div class="person-card">
+
+                    <div class="avatar blue">K</div>
+
+                    <div>
+                        <span>KETUA KELAS</span>
+                        <h3>Nama Ketua</h3>
+                        <p>Ketua Kelas</p>
+                    </div>
+
+                </div>
+
+
+                <div class="person-card">
+
+                    <div class="avatar purple">W</div>
+
+                    <div>
+                        <span>WAKIL KETUA</span>
+                        <h3>Nama Wakil</h3>
+                        <p>Wakil Ketua</p>
+                    </div>
+
+                </div>
+
+
+                <div class="person-card">
+
+                    <div class="avatar green">S</div>
+
+                    <div>
+                        <span>SEKRETARIS</span>
+                        <h3>Nama Sekretaris</h3>
+                        <p>Sekretaris Kelas</p>
+                    </div>
+
+                </div>
+
+
+                <div class="person-card">
+
+                    <div class="avatar orange">B</div>
+
+                    <div>
+                        <span>BENDAHARA</span>
+                        <h3>Nama Bendahara</h3>
+                        <p>Bendahara Kelas</p>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- DAFTAR SISWA -->
+        <section id="siswa" class="section">
+
+            <div class="section-heading">
+
+                <div>
+                    <span class="section-label">DATABASE KELAS</span>
+                    <h2>Daftar Siswa</h2>
+                </div>
+
+                <button class="primary-btn" onclick="addStudent()">
+                    + Tambah Siswa
+                </button>
+
+            </div>
+
+
+            <div class="student-panel">
+
+                <div class="search-area">
+
+                    <input
+                        type="text"
+                        id="searchInput"
+                        placeholder="🔍 Cari nama siswa..."
+                        oninput="renderStudents()"
+                    >
+
+                </div>
+
+
+                <div class="table-wrapper">
+
+                    <table>
+
+                        <thead>
+                            <tr>
+                                <th>NO</th>
+                                <th>NAMA SISWA</th>
+                                <th>STATUS</th>
+                                <th>AKSI</th>
+                            </tr>
+                        </thead>
+
+                        <tbody id="studentList"></tbody>
+
+                    </table>
+
+                </div>
+
+                <div class="empty" id="emptyMessage">
+                    Tidak ada data siswa.
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- INFORMASI -->
+        <section id="informasi" class="section">
+
+            <div class="section-heading">
+
+                <div>
+                    <span class="section-label">INFORMASI</span>
+                    <h2>Informasi Kelas</h2>
+                </div>
+
+            </div>
+
+
+            <div class="info-grid">
+
+                <div class="info-card">
+                    <span>🏫</span>
+                    <h3>Nama Kelas</h3>
+                    <p>XI RPL 1</p>
+                </div>
+
+                <div class="info-card">
+                    <span>📚</span>
+                    <h3>Jurusan</h3>
+                    <p>Rekayasa Perangkat Lunak</p>
+                </div>
+
+                <div class="info-card">
+                    <span>📅</span>
+                    <h3>Tahun Ajaran</h3>
+                    <p>2026 / 2027</p>
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <footer>
+            <p>© 2026 XI RPL 1 • Class Dashboard</p>
+        </footer>
+
+    </main>
+
+</div>
+
+<script src="script.js"></script>
+
+</body>
+  </html>
